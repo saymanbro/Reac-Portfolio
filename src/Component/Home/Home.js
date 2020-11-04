@@ -1,8 +1,8 @@
 import React from 'react';
-import Navber from '../Navber/Navber';
+import Navbar from '../Navber/Navber';
 import Header from '../Header/Header';
-import Particles from 'react-particles-js'
-
+import Particles from 'react-particles-js';
+import './Home.css'
 import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles ({
     particlesCanvas:{
@@ -12,18 +12,19 @@ const useStyles = makeStyles ({
 const Home = () => {
     const classes = useStyles()
     return (
-        <>
-           <Navber></Navber>
+        
+        <div className='home-container'>
+           <Navbar></Navbar>
            <Header></Header>
            <Particles 
-           canvasClassName={classes.particlesCanvas}
+           canvas ClassName={classes.particlesCanvas}
            params={{
                particles: {
                    number: {
                        value:45,
                        density: {
                            enable:true,
-                           value_area:900
+                           value_area:800
                        }
                    },
                    shape:{
@@ -47,9 +48,11 @@ const Home = () => {
            }}
           
            />
-           </>
-    );
+           
+          
+           </div>
     
+);    
 };
 
 export default Home;

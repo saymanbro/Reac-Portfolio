@@ -1,0 +1,23 @@
+.about-container{
+    background-color: lightblue;
+    width: 100%;
+    height: 90%;
+    text-align: center;
+    padding: 40px;
+}
+.intro-self{
+    background-color:white;
+    color:black;
+    width: 70%;
+    height: 50%;
+    margin-left: 200px;
+    padding: 20px;
+    border-radius: 16px;
+}
+.intro-self h1{
+    color:#00de3b ;
+}
+.intro-self Button{
+    background-color: #55ff83;
+    color: black;
+}

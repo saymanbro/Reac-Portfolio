@@ -9,7 +9,6 @@ ListItem,
 Avatar,
 Divider,
 List,
-Slider,
 Typography,
 ListItemIcon,
 Box,
@@ -19,13 +18,17 @@ ListItemText,
 } from '@material-ui/core';
 import {
     ArrowBack,
-    AssignmentInd,
+    InsertEmoticon,
     Home,
-    Apps,
-    ContactMail
+  ImportantDevicesTwoTone,
+  BorderColorRounded,
+  MessageRounded,
+   LibraryAddCheckRounded,
+   BuildRounded
+
 
 } from '@material-ui/icons';
-import avatar from '..//..//images/avatar.png';
+import avatar from '..//..//images/avatar.jpeg';
 //CSS styles
 
 const useStyles = makeStyles(theme =>({
@@ -37,8 +40,8 @@ const useStyles = makeStyles(theme =>({
     avatar: {
         display:'block',
         margin:'.5rem auto',
-        width:theme.spacing(13),
-        height:theme.spacing(13)
+        width:theme.spacing(15),
+        height:theme.spacing(15)
 
     },
     listItem: {
@@ -51,22 +54,33 @@ const menuItems = [
         listText:'Home'
     },
     {
-        listIcon: <AssignmentInd/>,
-        listText:'Resume'
+        listIcon: <InsertEmoticon/>,
+        listText:'About'
     },
     {
-        listIcon: <Apps/>,
-        listText:'Protfolio'
+        listIcon: <ImportantDevicesTwoTone/>,
+        listText:'Project'
     },
     {
-        listIcon: <ContactMail/>,
-        listText:'contact'
+        listIcon: <BorderColorRounded/>,
+        listText:'Blog'
     },
-    
+    {
+        listIcon:<BuildRounded/>,
+        listText:'Service'
+    },
+    {
+        listIcon:<LibraryAddCheckRounded/>,
+        listText:'Skill'
+    },
+    {
+        listIcon:<MessageRounded/>,
+        listText:'Contact'
+    }
 ]
 
 
-const Navber = () => {
+const Navbar = () => {
     const [state, setState] = useState({
         right:false
     })
@@ -76,7 +90,7 @@ const Navber = () => {
     const classes = useStyles();
     const sideList = Slider => (
         <Box component='div' onClick={toggleSlider(Slider, false)} className={classes.menuSliderContainer}>
-        <Avatar className={classes.avatar} src={avatar}></Avatar>
+        <Avatar className={classes.avatar }  src={avatar}></Avatar>
             <Divider/>
             <List>
                 {menuItems.map((IsItem, key) =>(
@@ -92,7 +106,7 @@ const Navber = () => {
     return (
         <>
        
-        <Box component='nav'>
+        <Box component='nav' className='fixed-top'>
             <AppBar position='static' style={{background:'#222'}}>
 
             <Toolbar>
@@ -117,4 +131,4 @@ const Navber = () => {
     );
 };
 
-export default Navber;
+export default Navbar;

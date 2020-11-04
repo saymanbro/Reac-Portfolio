@@ -1,0 +1,10 @@
+
+.home-container{
+    background-image: url(../../images/coffee-apple.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    
+  
+}
